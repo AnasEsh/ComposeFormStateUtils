@@ -52,7 +52,8 @@ open class FormFieldState<ValueType : Any,
             value is String&&
             ((maxLength!=null&&value.length>maxLength!!)
                     ||
-            (keyboardOptions.keyboardType== KeyboardType.Number&&!value.trim().isDigitsOnly()))
+            (keyboardOptions.keyboardType== KeyboardType.Number&&!value.trim().isDigitsOnly())
+                    )
 
         if(invalidInput) {
             // exceeded max length or entered non digit instead of digits

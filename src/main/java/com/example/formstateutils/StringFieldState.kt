@@ -5,7 +5,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.MutableState
 
 
-class StringFieldState<ErrorType : Any>(
+public class StringFieldState<ErrorType : Any>(
     _state: MutableState<String?>,
     label: String = "",
     @StringRes
@@ -26,4 +26,4 @@ class StringFieldState<ErrorType : Any>(
     autoValidate, maxLength,
     enabled,
     customValidator
-);
+)

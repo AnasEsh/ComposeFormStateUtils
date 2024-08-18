@@ -6,16 +6,19 @@ plugins {
 
 android {
     namespace = "com.example.formstateutils"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 26
-
+        targetSdk = 33
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -34,16 +37,13 @@ android {
 }
 
 dependencies {
-    implementation("androidx.compose.runtime:runtime:1.6.8")
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.compose.foundation:foundation-android:1.6.8")
-
+    implementation("androidx.compose.runtime:runtime:1.5.4")
+    implementation("androidx.core:core-ktx:1.10.0")
+    implementation("androidx.compose.foundation:foundation:1.1.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 
     //To support property reflection (ClassName::class.members)
-    api(kotlin("reflect"))
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
 }
