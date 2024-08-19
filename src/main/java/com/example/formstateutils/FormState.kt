@@ -1,4 +1,4 @@
-package com.example.formstateutils
+package com.mobily.composeformstateutils
 
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.derivedStateOf

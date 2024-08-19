@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.formstateutils"
+    namespace = "com.mobily.composeformstateutils"
     compileSdk = 33
 
     defaultConfig {

@@ -1,4 +1,4 @@
-package com.example.formstateutils
+package com.mobily.composeformstateutils
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.formstateutils.test", appContext.packageName)
+        assertEquals("com.mobily.composeformstateutils.test", appContext.packageName)
     }
 }

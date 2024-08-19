@@ -1,4 +1,4 @@
-package com.example.formstateutils
+package com.mobily.composeformstateutils
 
 
 fun Iterable<FormFieldState<*,*>>.validate(): Boolean {

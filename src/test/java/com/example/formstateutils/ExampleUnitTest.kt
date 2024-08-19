@@ -1,4 +1,4 @@
-package com.example.formstateutils
+package com.mobily.composeformstateutils
 
 import org.junit.Test
 
