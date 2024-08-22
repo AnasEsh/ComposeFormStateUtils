@@ -114,87 +114,14 @@ afterEvaluate {
             maven {
                 name = "GithubPackages"
                 url = uri("https://maven.pkg.github.com/AnasEsh/ComposeFormStateUtils")
-                credentials {
-                    username = "AnasEsh"
-                    password = "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"
-                }
+                //add credentials for gh
+//                credentials {
+//                    username = ""
+//                    password = ""
+//                }
                 isAllowInsecureProtocol = true
             }
         }
     }
 
-//    publishing {
-//        publications {
-//            create<MavenPublication>("maven") {
-//                groupId = "com.mobily" // Replace with your group ID
-//                artifactId = "composeformstateutils" // Replace with your artifact ID
-//                version = "1.0.0" // Replace with your version
-//
-//                // Specify the AAR artifact
-////            from(components["debug"])
-//
-//                pom.withXml {
-//                    // Create a new 'dependencies' node
-//                    val dependenciesNode = asNode().appendNode("dependencies")
-//                    // Iterate over all dependencies in the 'api' configuration
-//                    configurations.getByName("api").allDependencies.forEach { dep ->
-//                        val dependencyNode = dependenciesNode.appendNode("dependency")
-//                        dependencyNode.appendNode("groupId", dep.group)
-//                        dependencyNode.appendNode("artifactId", dep.name)
-//                        dependencyNode.appendNode("version", dep.version)
-//                        dependencyNode.appendNode("scope", "compile")
-//                    }
-//
-//                    configurations.getByName("implementation").allDependencies.forEach { dep ->
-//                        val dependencyNode = dependenciesNode.appendNode("dependency")
-//                        dependencyNode.appendNode("groupId", dep.group)
-//                        dependencyNode.appendNode("artifactId", dep.name)
-//                        dependencyNode.appendNode("version", dep.version)
-//                        dependencyNode.appendNode("scope", "compile")
-//                    }
-//                }
-//            }
-//        }
-//        repositories {
-//            maven {
-//                url = uri("${rootProject.buildDir}/repo") // Publish to the local directory
-//            }
-//        }
-//    }
-
-
-//    publishing {
-//
-//        publications {
-//            create<MavenPublication>("release") {
-//                groupId = "com.mobily"
-//                artifactId = "formstate"
-//                version = "1.0.0"
-//                println("Available components: ${components.names}")
-//                from(components["release"])
-//
-////                artifact(tasks.getByName("bundleReleaseAar"))
-////
-////                // Include transitive dependencies in the POM file
-////                pom {
-////                    withXml {
-////                        asNode().appendNode("dependencies").apply {
-////                            configurations["api"].dependencies.forEach {
-////                                appendDependencyNode(it, "compile")
-////                            }
-////                            configurations["implementation"].dependencies.forEach {
-////                                appendDependencyNode(it, "runtime")
-////                            }
-////                        }
-////                    }
-////                }
-//            }
-//        }
-//
-//        repositories {
-//            maven {
-//                url = uri("${project.buildDir}/repo")
-//            }
-//        }
-//    }
 }
